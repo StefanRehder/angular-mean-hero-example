@@ -1,27 +1,14 @@
-# AngularMeanHeroExample
+# MEAN Stack Hero example
+This project is based on [MongoDB 4.0.0 Community](https://www.mongodb.com/download-center#community), [Express 4.16](https://expressjs.com/), [Angular 6.1.1](https://angular.io/) and [Node.js 8.11.3](https://nodejs.org).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+# Requirements
+- [Node.js](https://nodejs.org)
+- [MongoDB](https://www.mongodb.com) 4.0 must be installed and running locally.
 
-## Development server
+# Getting Started
+- `npm install` - Install project dependencies
+- `npm run server:start` - Start the Express server application on port 8210
+- `npm run client:start` - Start the Angular client application on port 8200
+- `npm run start` - Start the server and the client concurrently
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Open http://localhost:8200/ in a browser.

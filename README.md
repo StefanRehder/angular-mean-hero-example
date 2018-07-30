@@ -12,3 +12,6 @@ This project is based on [MongoDB 4.0.0 Community](https://www.mongodb.com/downl
 - `npm run start` - Start the server and the client concurrently
 
 Open http://localhost:8200/ in a browser.
+
+# WORK IN PROGRESS
+Styling will be added later and there are some known bugs that will be fixed later as well.

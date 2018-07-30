@@ -1,0 +1,18 @@
+<h1>Hero Client implemented with Angular and Ionic</h1>
+
+<h2>List of Heroes</h2>
+<p style="color: red">{{ statusMessage }}</p>
+
+<hero-list-element *ngFor="let hero of heroes"
+                    [element]="hero"
+                    (deleteClicked)="onDeleteClicked()"
+                    (heroListElementClicked)="onHeroListElementClicked($event)">
+</hero-list-element>
+
+<div *ngIf="selectedHero">
+    <hero-details [selectedHero]="selectedHero">
+    </hero-details>
+</div>
+<div *ngIf="!selectedHero">
+    <h2>Select a hero to see details</h2>
+</div>

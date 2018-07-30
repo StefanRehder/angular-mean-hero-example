@@ -4,13 +4,9 @@ export class IndexRoutes {
 
     constructor() {}
 
-    defaultRoute(req: express.Request, res: express.Response){
-        res.sendFile('index.html', {root: './server/views'});
-    }
-
     paths(app: express.Application) {
         app.get('/', (req: express.Request, res: express.Response) => {
-            this.defaultRoute(req, res);
+            res.sendFile('index.html', {root: './server/views'});
         });
 
         app.get('*', (req: express.Request, res: express.Response) => {

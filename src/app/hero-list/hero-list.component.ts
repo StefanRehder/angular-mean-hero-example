@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CreateHeroComponent } from '../create-hero/create-hero.component';
 import { HttpErrorResponse } from '@angular/common/http';
 import { IHero } from '../../../server/models/hero';
@@ -9,19 +9,15 @@ import { HeroService } from '../hero.service';
   templateUrl: './hero-list.component.html',
   styleUrls: ['./hero-list.component.css']
 })
-export class HeroListComponent {
+export class HeroListComponent implements OnInit {
   protected heroes: IHero[] = [];
   protected statusMessage: string = '';
   public selectedHero: IHero;
 
   constructor(private heroService: HeroService) { }
 
-  ionViewWillEnter() {
+  ngOnInit(): void {
     this.refreshList();
-  }
-
-  protected goToCreateHeroPage() {
-    // TODO: Angular navigation to Create Hero component
   }
 
   public onHeroListElementClicked(elementData: IHero) {

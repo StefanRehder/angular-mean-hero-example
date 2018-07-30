@@ -9,6 +9,7 @@ import { HeroService } from 'src/app/hero.service';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HeroListComponent } from './hero-list/hero-list.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'create-hero',      component: CreateHeroComponent },
@@ -27,6 +28,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [HeroService],

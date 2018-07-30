@@ -1,11 +1,10 @@
 <h2>Create or update Hero</h2>
 <p style="color: red">{{ statusMessage }}</p>
-<!--
-<form [formGroup]="createHeroForm" (ngSubmit)="onSubmit()" novalidate>
-    <input type="text"formControlName="name" value="">
-    <input type="text" formControlName="strength" value="">
+
+<form [formGroup]="createHeroForm" (ngSubmit)="onSubmit()">
+    Name: <input type="text" formControlName="name" value="">
+    Strength: <input type="text" formControlName="strength" value="">
     <br>
     <button type="submit">Submit</button>
     <button type="reset">Reset</button>
 </form>
--->

@@ -1,7 +1,9 @@
-<div (click)="click(element)">
-  <h2>{{ element.name }}</h2>
-  Strength: {{ element.strength }}
-  <button (click)="deleteHero(element.name)">
-    Delete
-  </button>
-
+<p-card title="{{ element.name }}" (click)="click(element)">
+    Strength: {{ element.strength }}
+    <button pButton
+            class="ui-button-danger"
+            (click)="deleteHero(element.name)"
+            icon="fa fa-trash-alt"
+            label="Delete">
+    </button>
+</p-card>

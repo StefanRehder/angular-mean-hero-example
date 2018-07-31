@@ -5,8 +5,6 @@ export class HeroRoutes {
     constructor() {}
 
     paths(app: express.Application) {
-
-        // TODO: Make the put operation replace the document if a hero with the same name already exists
         app.put('/hero', (req, res) => {
             if (!req.body) {
                 return res.sendStatus(400);
@@ -18,6 +16,18 @@ export class HeroRoutes {
                 return;
             }
 
+            // Check if hero with that name alreay exists and delete if it does
+            Hero.findOne({ name: req.body.name }, (err, result) => {
+                if (result) {
+                    Hero.deleteOne({ name: req.body.name }, (err) => {
+                        if (err) {
+                            res.status(500).send(err);
+                        }
+                    });
+                }
+            });
+
+            // Create hero
             const hero = new Hero(req.body);
             hero.save((err: any) => {
               if (err) {

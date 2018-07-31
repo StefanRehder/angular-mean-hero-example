@@ -1,18 +1,21 @@
-<h1>Hero Client implemented with Angular and Ionic</h1>
+<div class="ui-g">
+    <div class="ui-g-6">
+        <h1>List of Heroes</h1>
+        <p style="color: red">{{ statusMessage }}</p>
 
-<h2>List of Heroes</h2>
-<p style="color: red">{{ statusMessage }}</p>
-
-<hero-list-element *ngFor="let hero of heroes"
-                    [element]="hero"
-                    (deleteClicked)="onDeleteClicked()"
-                    (heroListElementClicked)="onHeroListElementClicked($event)">
-</hero-list-element>
-
-<div *ngIf="selectedHero">
-    <hero-details [selectedHero]="selectedHero">
-    </hero-details>
-</div>
-<div *ngIf="!selectedHero">
-    <h2>Select a hero to see details</h2>
+        <hero-list-element *ngFor="let hero of heroes"
+                           [element]="hero"
+                           (deleteClicked)="onDeleteClicked()"
+                           (heroListElementClicked)="onHeroListElementClicked($event)">
+        </hero-list-element>
+    </div>
+    <div class="ui-g-6">
+        <div *ngIf="selectedHero">
+            <hero-details [selectedHero]="selectedHero">
+            </hero-details>
+        </div>
+        <div *ngIf="!selectedHero">
+            <h2>Select a hero to see details</h2>
+        </div>
+    </div>
 </div>

@@ -1,5 +1,5 @@
 # MEAN Stack Hero example
-This project is based on [MongoDB 4.0.0 Community](https://www.mongodb.com/download-center#community), [Express 4.16](https://expressjs.com/), [Angular 6.1.1](https://angular.io/) and [Node.js 8.11.3](https://nodejs.org).
+This project is based on [MongoDB 4.0.0 Community](https://www.mongodb.com/download-center#community), [Express 4.16](https://expressjs.com/), [Angular 6.1.1](https://angular.io/) and [Node.js 8.11.3](https://nodejs.org). The UI was implemented with [PrimeNG](https://www.primefaces.org/primeng/).
 
 # Requirements
 - [Node.js](https://nodejs.org)
